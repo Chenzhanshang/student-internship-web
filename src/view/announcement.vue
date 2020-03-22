@@ -20,6 +20,16 @@
         align="center">
     </el-table-column>
     <el-table-column
+        prop="announcementTime"
+        label="公告时间"
+        align="center">
+    </el-table-column>
+    <el-table-column
+        prop="user.name"
+        label="发布人"
+        align="center">
+    </el-table-column>
+    <el-table-column
       label="操作"
       align="center">
         <template slot-scope="scope" >

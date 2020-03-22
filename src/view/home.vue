@@ -1,12 +1,13 @@
 <template>
 <main>
+  <div style="height:650px;background-color:#545c64">
     <el-row class="tac" :gutter=20>
         <el-col :span="4" >
             <div class="left">
             <div class="user"><span >管理员：{{user.userName}} </span><span class="p1" @click="logout">注销</span></div>
             
             <el-menu
-            default-active="1"
+            default-active="/adminHome/adminAnnouncement"
             class="el-menu-vertical-demo"
             :router=true
             background-color="#545c64"
@@ -51,12 +52,12 @@
             </div>
         </el-col>
         
-        <el-col :span="20">
+        <el-col :span="20" style="height:650px;background-color:#ffffff">
             <router-view></router-view>
         </el-col>
  
     </el-row>
-
+  </div>
 </main>
 </template>
 <script>
@@ -143,6 +144,9 @@
         //将用户信息放入缓存
         localStorage.user = JSON.stringify(this.user)
       }
+
+      //更新路由
+      this.$router.push('/adminHome/adminAnnouncement')
         
   }
 }
